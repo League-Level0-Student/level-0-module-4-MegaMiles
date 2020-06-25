@@ -1,29 +1,33 @@
-/*
+
 import ddf.minim.*;
 Minim minim = new Minim(this); 
-AudioSample doh;
 AudioSample woohoo;
-*/
 
+import javax.swing.JOptionPane;
 void setup() {
   
   //Find a Where's Waldo picture and drop it into this sketch.     
   PImage waldo = loadImage("waldo.jpg"); // Change this to match your file name.
-  size(500, 500); // Change this to match the size of your waldo picture
+  size(1500, 1000); // Change this to match the size of your waldo picture
+  waldo.resize(1500,1000);
   image(waldo, 0, 0);
 
-  /*
-    doh = minim.loadSample("homer-doh.wav"); 
-    woohoo = minim.loadSample("homer-woohoo.wav"); 
-  */
+ 
+    
+    woohoo = minim.loadSample("finished.wav"); 
+  
 }
 
 void draw() {
       // Use this print statement to find out the coordinates of Waldo when you press the mouse
-      // println("X: " + mouseX + " Y: " + mouseY); 
+//if(mousePressed){ println("X: " + mouseX + " Y: " + mouseY); }
 
       // If the mouse is on Waldo, print “Waldo found!”
-
+ if(mousePressed){     
+if(mouseX < 471 && mouseX > 431 && mouseY < 745 && mouseY > 705 ){
+JOptionPane.showMessageDialog(null,"You found waldo!!!!!!! Yay");
+playWoohoo();           
+}}
 /**********  Now to add the sounds. You will need to uncomment all the code and import the Minim library ********/
 
       // If Waldo is found, also use a method below to play “Woohoo”
@@ -35,14 +39,8 @@ void draw() {
 }
 /*********************  Use the methods below, DON'T CHANGE THE CODE *********************/
 
-/*
+
 void playWoohoo() {
      woohoo.stop();
      woohoo.trigger();
 }
-
-void playDoh() {
-     doh.stop();
-     doh.trigger();
-}
-*/
