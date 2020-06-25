@@ -12,11 +12,18 @@ public class SleepyHead {
 		/************************  SLEEPY HEAD  **************************/
 		boolean isWeekend;
 		// Write code to ask the user what day it is.
-        
+       String Day = JOptionPane.showInputDialog(null,"What day is it?");
 		// Set the boolean isWeekend based on the value they enter
-		
-		
+		if(Day.equals("Saturday")&& Day.equals("Sunday")){
+		isWeekend = true;
+		JOptionPane.showMessageDialog(null,"sleep in");
+		}
+		else {
+		isWeekend = false;
+			JOptionPane.showMessageDialog(null,"Get out of bed and go to school!");	
+		}
 		// If it is the weekend, tell the user they get to sleep in.
+		
 		
 		// If it is not the weekend, tell them to get out of bed and go to school!
 		
@@ -25,11 +32,19 @@ public class SleepyHead {
 
 		boolean passedExam;
 		// Write code to ask the user what percentage they scored in their last exam
-
+		String exam = JOptionPane.showInputDialog(null,"What percent did you get on your test");
 		
 		// If they scored more than 70, they passed the exam.
 		// Set the boolean passedExam based on their score.
-		
+		int score = Integer.parseInt(exam);
+		if(score > 70){
+			passedExam = true;
+			JOptionPane.showMessageDialog(null,"congratulations you passed the exam!!!!!!!!!!!! ");
+			}
+		else {
+		passedExam = false;
+JOptionPane.showMessageDialog(null, "Better luck next time! :(");
+		}
 		// If the user passed the exam, congratulate them
 		
 		// otherwise, wish them better luck next time.
@@ -41,7 +56,7 @@ public class SleepyHead {
 		// This code will repeat until gameIsOver is changed to true
 		while (!gameIsOver) {
 			// Ask the user if the game is over. 
-			String gameOver = JOptionPane.showInputDialog("is game over");
+			String gameOver = JOptionPane.showInputDialog("is game over?");
 			if (gameOver.equalsIgnoreCase("yes"))
 				gameIsOver = true;
 			
@@ -49,13 +64,15 @@ public class SleepyHead {
 
 		}
 		// Tell the user "game is over" 
-		
+		if(gameIsOver == true) {
+		JOptionPane.showMessageDialog(null,"Game is over");
+		}
 		
 		/***********************   RED SQUARE  ********************/
 		
 		boolean isRed;
 		// Ask the user what color to draw with. Based on their answer, set the isRed variable
-		
+		JOptionPane.showInputDialog(null,"What color do you want me to draw?");
 		
 		boolean isSquare;		
 		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
