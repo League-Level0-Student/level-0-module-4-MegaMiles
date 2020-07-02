@@ -22,7 +22,7 @@ else if(Test > 1) {
 	JOptionPane.showMessageDialog(null,"Pretty bad :(");
 }
 else if(Test == 1) {
-	JOptionPane.showMessageDialog(null,"Terible Job:( :( :(");	
+	JOptionPane.showMessageDialog(null,"Terrible Job:( :( :(");	
 }
 	
 	
